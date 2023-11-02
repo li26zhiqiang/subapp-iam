@@ -1,0 +1,111 @@
+#app {
+    // 主体区域
+    .main-container {
+        min-height: 100%;
+        transition: margin-left 0.28s;
+    }
+
+    // 侧边栏
+    .sidebar-container {
+        transition: width 0.28s;
+        width: 180px !important;
+        z-index: 990;
+
+        .horizontal-collapse-transition {
+            transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+        }
+
+        a {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .svg-icon {
+            margin-right: 16px;
+        }
+
+        .el-menu {
+            border: none;
+            width: 100% !important;
+        }
+    }
+
+    .hideSidebar {
+        .sidebar-container {
+            width: 64px !important;
+
+            .svg-icon {
+                margin-right: 0px;
+            }
+        }
+
+        .accordion-menu-container .top {
+            padding-left: 20px !important;
+
+            .app-title {
+                display: none;
+            }
+        }
+
+        .sub-menu-title-noDropdown {
+            padding-left: 10px !important;
+            position: relative;
+
+            .el-tooltip {
+                padding: 0 10px !important;
+            }
+        }
+
+        .el-sub-menu {
+            & > .el-sub-menu__title {
+                padding: 0 20px !important;
+
+                & > span {
+                    height: 0;
+                    width: 0;
+                    overflow: hidden;
+                    visibility: hidden;
+                    display: inline-block;
+                }
+
+                .el-sub-menu__icon-arrow {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .sidebar-container .nest-menu .el-sub-menu > .el-sub-menu__title,
+    .sidebar-container .el-sub-menu .el-menu-item {
+        min-width: 180px !important;
+    }
+
+    .el-menu--collapse .el-menu .el-sub-menu {
+        min-width: 180px !important;
+    }
+
+    //适配移动端
+    .mobile {
+        .main-container {
+            margin-left: 0px;
+        }
+
+        .sidebar-container {
+            top: 50px;
+            transition: transform 0.28s;
+        }
+
+        &.hideSidebar {
+            .sidebar-container {
+                transition-duration: 0.3s;
+            }
+        }
+    }
+
+    .withoutAnimation {
+        .main-container,
+        .sidebar-container {
+            transition: none;
+        }
+    }
+}

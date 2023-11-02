@@ -1,0 +1,47 @@
+/* 只需要重写你需要的即可 */
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'white': #ffffff,
+    'black': #000000,
+    'primary': (
+      'base': #18b3b3,
+    ),
+    'success': (
+      'base': #52c41a,
+    ),
+    'warning': (
+      'base': #faad14,
+    ),
+    'danger': (
+      'base': #ff4d4f,
+    ),
+    'error': (
+      'base': #ff4d4f,
+    ),
+    'info': (
+      'base': #191919,
+    ),
+  ),
+  $text-color: (
+    'primary': #000000,
+    'regular': rgba(0, 0, 0, 0.88),
+    'secondary': rgba(0, 0, 0, 0.65),
+    'placeholder': rgba(0, 0, 0, 0.45),
+    'disabled': rgba(0, 0, 0, 0.25),
+  ),
+  $border-color: (
+    'light': #d9d9d9,
+    'lighter': #f0f0f0,
+    'extra-light': #f0f0f0,
+  ),
+  $table-padding: (
+      'large': 16px 0,
+      'default': 12px 0,
+      'small': 8px 0,
+  ),
+  $table-cell-padding: (
+    'large': 0 16px,
+    'default': 0 20px,
+    'small': 0 8px,
+  )
+);

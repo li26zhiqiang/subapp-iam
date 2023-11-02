@@ -1,0 +1,53 @@
+.check-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .check-card-item {
+        height: 72px;
+        width: 200px;
+        padding: 16px;
+        border: 1px solid #dddddd;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+
+        &.disabled {
+            cursor: not-allowed;
+
+            &:hover {
+                border-color: #dddddd;
+                background-color: #f4f4f5;
+            }
+        }
+
+        &.active {
+            border-color: #18b3b3;
+            background-color: #e8f7f7;
+
+            &::after {
+                position: absolute;
+                inset-block-start: 2px;
+                inset-inline-end: 2px;
+                width: 0;
+                height: 0;
+                border: 6px solid #18b3b3;
+                border-block-end: 6px solid transparent;
+                border-inline-start: 6px solid transparent;
+                border-start-end-radius: 2px;
+                content: '';
+            }
+        }
+
+        &:hover {
+            background-color: #e8f7f7;
+            border-color: #18b3b3;
+        }
+
+        img {
+            width: 200px;
+            width: 130px;
+            height: 40px;
+        }
+    }
+}

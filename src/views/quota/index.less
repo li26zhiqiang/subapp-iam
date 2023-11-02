@@ -1,0 +1,151 @@
+.quota-container {
+    .card-header {
+        font-size: 18px;
+        font-weight: 700;
+        padding-bottom: 24px;
+    }
+
+    .empty-desp {
+        font-size: 16px;
+
+        .buy {
+            cursor: pointer;
+            color: #18b3b3;
+        }
+    }
+
+    .member-balance-title {
+        text-align: center;
+        font-size: 32px;
+        color: #3e3e3e;
+        margin: 42px 0;
+    }
+
+    .member-balance-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 0 !important;
+
+        .member-balance-col {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+
+            &:last-child,
+            &:nth-child(3n) {
+                .balance-divider {
+                    display: none;
+                }
+            }
+        }
+
+        .member-balance-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-width: 370px;
+            margin: 0 auto;
+            width: 100%;
+
+            .image {
+                color: #1677ff;
+                font-size: 22px;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                width: 350px;
+                align-items: center;
+                margin-left: 16px;
+
+                .header {
+                    width: 100%;
+                    padding: 0 0 20px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .margin-list {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+
+                        .quota {
+                            font-family: din-bold;
+                            line-height: 24px;
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+
+                            .value {
+                                font-family: din-bold;
+                                font-weight: bold;
+                                font-size: 24px;
+                                line-height: 24px;
+                                margin-left: 12px;
+                            }
+                        }
+                    }
+
+                    .flavor {
+                        font-size: 18px;
+                        margin-bottom: 1px;
+                        text-align: end;
+                    }
+                }
+
+                .footer {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .title {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #999;
+                        line-height: 14px;
+
+                        .buy {
+                            cursor: pointer;
+                            color: #18b3b3;
+                        }
+                    }
+                }
+            }
+        }
+
+        .balance-divider {
+            height: 50px;
+        }
+    }
+
+    .quota-record {
+        margin-top: 48px;
+
+        .quota-record-list {
+            .margin-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                .quota {
+                    font-family: din-bold;
+                    display: flex;
+                    align-items: center;
+
+                    .value {
+                        font-family: din-bold;
+                        font-weight: bold;
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
